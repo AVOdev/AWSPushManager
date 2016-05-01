@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = "maven"
+    bintrayName = "aws-push-manager"
+
+    publishedGroupId = "com.avodev.awspushmanager"
+    libraryName = "AWS PushManager"
+    artifact = "aws-push-manager"
+
+    libraryDescription = "Amazon AWS SNS Push registration manager for Android"
+
+    siteUrl = "https://github.com/AVOdev/AWSPushManager"
+    gitUrl = "https://github.com/AVOdev/AWSPushManager.git"
+
+    libraryVersion = "0.0.1"
+
+    developerId = "Flitskikker"
+    developerName = "Martijn van Berkel (Flitskikker)"
+    developerEmail = "martijneinstein@hotmail.com"
+
+    licenseName = "The Apache Software License, Version 2.0"
+    licenseUrl = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
@@ -26,3 +50,6 @@ dependencies {
     compile 'com.amazonaws:aws-android-sdk-core:2.2.14'
     compile 'com.amazonaws:aws-android-sdk-sns:2.2.14'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
