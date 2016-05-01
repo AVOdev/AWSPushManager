@@ -1,1 +1,1 @@
-include ':app', ':library'
+include ':app', ':aws-push-manager'
